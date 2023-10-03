@@ -1,0 +1,7 @@
+{
+  "name": "tutor-connect",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
