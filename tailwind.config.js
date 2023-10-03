@@ -1,0 +1,36 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,ts}"],
+  theme: {
+    extend: {},
+    colors: {
+      sun: "#ffb84f",
+      pink: "#ffb2b2",
+      coral: "#ff8c8c",
+      purple: "#7c83fd",
+      lavender: "#a3a8fe",
+      "light-purple": "#d1d3fb",
+      dark: "#343434",
+      text: "#484848",
+      medium: "#92949c",
+      danger: "#eb445a",
+      warning: "#ffc409",
+      success: "#2dd36f",
+      tertiary: "#5260ff",
+      secondary: "#3dc2ff",
+      primary: "#3880ff",
+      default: "#3880ff",
+      gray: "#cccccc",
+      "gray-lighter": "#d6d6d6",
+      light: "#f4f5f7",
+      lighter: "#f9fafc",
+      "near-white": "#fcfdfe",
+      white: "#ffffff",
+    },
+  },
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/typography"),
+  ],
+};
