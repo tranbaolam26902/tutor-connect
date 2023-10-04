@@ -14,7 +14,7 @@
           Connect to the biggest learning community.
         </h3>
       </div>
-      <form class="flex flex-col gap-4">
+      <form class="flex flex-col gap-4" (submit)="handleLogin()">
         <ion-list
           lines="none"
           class="flex flex-col gap-4 -m-1 p-1 bg-secondary"
@@ -45,10 +45,11 @@
         </ion-list>
         <a
           [routerLink]="['/reset-password']"
-          class="font-bold text-end text-sm text-accent"
+          class="ml-auto w-fit font-bold text-sm text-accent"
           >Forgot your password?</a
         >
         <ion-button
+          type="submit"
           color="tertiary"
           class="login-button m-0 font-bold text-lg uppercase"
           >Log in</ion-button
