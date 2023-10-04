@@ -1,9 +1,90 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <img src="assets/images/logo-with-text.png" alt="logo" />
+<ion-content>
+  <section slot="fixed" class="relative h-screen bg-secondary">
+    <div class="h-[8.75rem] bg-accent"></div>
+    <ion-img
+      src="assets/images/logo-with-text.png"
+      alt="logo"
+      class="absolute top-[4.5rem] right-5"
+    />
+    <div class="flex flex-col gap-10 px-5 py-10 bg-secondary">
+      <div class="flex flex-col gap-1">
+        <h1 class="font-bold text-sm uppercase">Sign in</h1>
+        <h2 class="font-bold text-4xl capitalize">Welcome back!</h2>
+        <h3 class="text-sm text-text-secondary font-bold">
+          Connect to the biggest learning community.
+        </h3>
+      </div>
+      <form class="flex flex-col gap-4">
+        <ion-list
+          lines="none"
+          class="flex flex-col gap-4 -m-1 p-1 bg-secondary"
+        >
+          <ion-item class="ion-item rounded-lg shadow">
+            <ion-icon
+              src="assets/icons/envelope.svg"
+              class="text-base"
+            ></ion-icon>
+            <ion-input
+              type="email"
+              [clearInput]="true"
+              placeholder="Enter your email"
+              class="input ml-4 border-none"
+            >
+            </ion-input>
+          </ion-item>
+          <ion-item class="ion-item rounded-lg shadow">
+            <ion-icon src="assets/icons/lock.svg" class="text-base"></ion-icon>
+            <ion-input
+              type="password"
+              [clearInput]="true"
+              placeholder="Enter your password"
+              class="input ml-4 border-none"
+            >
+            </ion-input>
+          </ion-item>
+        </ion-list>
+        <a
+          [routerLink]="['/reset-password']"
+          class="font-bold text-end text-sm text-accent"
+          >Forgot your password?</a
+        >
+        <ion-button
+          color="tertiary"
+          class="login-button m-0 font-bold text-lg uppercase"
+          >Log in</ion-button
+        >
+      </form>
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center justify-center gap-8">
+          <span class="w-16 h-px bg-text-secondary"></span>
+          <span class="font-bold text-xs text-text-tertiary uppercase">Or</span>
+          <span class="w-16 h-px bg-text-secondary"></span>
+        </div>
+        <div class="flex gap-3">
+          <button
+            type="button"
+            class="flex-1 flex items-center justify-center p-3 bg-white border border-[#F4F5F7] rounded-lg shadow"
+          >
+            <ion-icon
+              src="assets/icons/logo-google.svg"
+              class="text-xl"
+            ></ion-icon>
+          </button>
+          <button
+            type="button"
+            class="flex-1 flex items-center justify-center p-3 bg-white border border-[#F4F5F7] rounded-lg shadow"
+          >
+            <ion-icon
+              src="assets/icons/logo-facebook.svg"
+              class="text-xl"
+            ></ion-icon>
+          </button>
+        </div>
+      </div>
+      <div class="flex justify-center gap-1 font-bold text-sm">
+        <span class="text-text-secondary">Don't have an account?</span>
+        <a [routerLink]="['/sign-up']" class="text-accent">Create one!</a>
+      </div>
+    </div>
+  </section>
 </ion-content>
