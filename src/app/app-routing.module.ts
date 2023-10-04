@@ -8,19 +8,14 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'home',
-    loadChildren: () =>
-      import('./pages/home/home.module').then((m) => m.HomePageModule),
+    path: 'tabs',
+    redirectTo: 'tabs/home',
+    pathMatch: 'full',
   },
   {
     path: 'login',
     loadChildren: () =>
       import('./pages/login/login.module').then((m) => m.LoginPageModule),
-  },
-  {
-    path: 'profile',
-    loadChildren: () =>
-      import('./pages/profile/profile.module').then((m) => m.ProfilePageModule),
   },
   {
     path: 'sign-up',
@@ -29,7 +24,15 @@ const routes: Routes = [
   },
   {
     path: 'reset-password',
-    loadChildren: () => import('./pages/reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+    loadChildren: () =>
+      import('./pages/reset-password/reset-password.module').then(
+        (m) => m.ResetPasswordPageModule
+      ),
+  },
+  {
+    path: 'tabs',
+    loadChildren: () =>
+      import('./components/tabs/tabs.module').then((m) => m.TabsPageModule),
   },
 ];
 
