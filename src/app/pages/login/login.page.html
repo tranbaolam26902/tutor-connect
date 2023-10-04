@@ -83,7 +83,9 @@
       </div>
       <div class="flex justify-center gap-1 font-bold text-sm">
         <span class="text-text-secondary">Don't have an account?</span>
-        <a [routerLink]="['/sign-up']" class="text-accent">Create one!</a>
+        <a [routerLink]="['/sign-up']" [replaceUrl]="true" class="text-accent"
+          >Create one!</a
+        >
       </div>
     </div>
   </section>
