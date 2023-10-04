@@ -14,6 +14,5 @@ export class TabsPage implements OnInit {
 
   public handleChangeTab(event: any): void {
     this.selectedTab = event.tab;
-    console.log(this.selectedTab);
   }
 }
