@@ -52,3 +52,11 @@
   font-family: "Montserrat", sans-serif;
   color: var(--text-primary);
 }
+textarea,
+input {
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  border: none;
+}
