@@ -2,10 +2,10 @@
  * App Global CSS
  * ----------------------------------------------------------------------------
  * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
+ * the entire app and not just one component. Additionally; this file can be
  * used as an entry point to import other CSS/Sass files to be included in the
  * output CSS.
- * For more information on global stylesheets, visit the documentation:
+ * For more information on global stylesheets; visit the documentation:
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
@@ -24,3 +24,31 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+/* Tailwindcss */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --danger: #eb445a;
+  --warning: #ffc409;
+  --success: #2dd36f;
+  --black: #000000;
+  --white: #ffffff;
+  --lighter-accent: #d1d3fb;
+  --light-accent: #a3a8fe;
+  --accent: #7c83fd;
+  --secondary: #f8f7fa;
+  --primary: #ffffff;
+  --light-gray: #e5e5e5;
+  --light-coral: #ffb2b2;
+  --coral: #ff8c8c;
+  --text-tertiary: #cccccc;
+  --text-secondary: #92949c;
+  --text-primary: #484848;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-primary);
+}
