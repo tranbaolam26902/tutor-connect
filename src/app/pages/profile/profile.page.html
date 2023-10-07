@@ -1,13 +1,124 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="container">
+  <div class="relative bg-secondary">
+    <!-- Start: Header -->
+    <header
+      class="sticky top-0 flex items-center justify-between gap-2 px-5 py-2 h-[4.25rem] bg-secondary"
+    >
+      <ion-button
+        size="small"
+        shape="round"
+        class="button aspect-square"
+        (click)="handleBack()"
+      >
+        <ion-icon
+          slot="icon-only"
+          name="arrow-back-outline"
+          class="text-text-secondary"
+        ></ion-icon>
+      </ion-button>
+      <h1 class="font-bold text-xl text-text-secondary">Profile</h1>
+      <ion-button size="small" shape="round" class="button aspect-square">
+        <ion-icon
+          slot="icon-only"
+          name="notifications-outline"
+          class="text-text-secondary"
+        ></ion-icon>
+      </ion-button>
+    </header>
+    <!-- End: Header -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <!-- Start: Body -->
+    <div class="relative flex flex-col gap-3 px-5 py-2 bg-secondary">
+      <!-- Start: Avatar -->
+      <section
+        class="absolute left-1/2 z-10 mx-auto w-32 aspect-square bg-accent border-8 border-white rounded-full -translate-x-1/2 shadow"
+      >
+        <span
+          class="absolute left-1/2 -bottom-2 px-2 py-1 w-max font-bold text-sm text-accent capitalize bg-white border border-accent rounded-full -translate-x-1/2"
+          >Basic User</span
+        >
+      </section>
+      <!-- End: Avatar -->
+
+      <!-- Start: Account info -->
+      <section
+        class="relative z-0 mt-[4.25rem] flex flex-col items-center gap-9 px-4 pt-20 pb-9 bg-white rounded-3xl shadow"
+      >
+        <div class="flex flex-col items-center gap-2">
+          <h2 class="font-bold text-2xl text-text-primary">
+            Neovim Catppuccin
+          </h2>
+          <h4 class="font-medium text-sm text-text-secondary">
+            catppuccin@gmail.com
+          </h4>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex flex-col items-center gap-2">
+            <h4 class="font-bold text-text-primary">29/09/2023</h4>
+            <h6 class="font-bold text-2xs text-text-tertiary capitalize">
+              Joined since
+            </h6>
+          </div>
+          <span class="my-auto w-px h-7 bg-text-tertiary"></span>
+          <div class="flex flex-col items-center gap-2">
+            <h4 class="font-bold text-text-primary">144</h4>
+            <h6 class="font-bold text-2xs text-text-tertiary capitalize">
+              Total booking
+            </h6>
+          </div>
+          <span class="my-auto w-px h-7 bg-text-tertiary"></span>
+          <div class="flex flex-col items-center gap-2">
+            <h4 class="font-bold text-text-primary">4096</h4>
+            <h6 class="font-bold text-2xs text-text-tertiary capitalize">
+              Hour studied
+            </h6>
+          </div>
+        </div>
+      </section>
+      <!-- End: Account info -->
+
+      <!-- Start: User info -->
+      <section
+        class="divide-y divide-secondary p-4 bg-white rounded-3xl shadow"
+      >
+        <div class="flex items-center justify-between py-4">
+          <div class="flex items-center gap-3">
+            <ion-icon src="assets/icons/cake.svg"></ion-icon>
+            <span class="font-bold text-xs text-text-tertiary">Birthday</span>
+          </div>
+          <p class="font-medium">10/04/2002</p>
+        </div>
+        <div class="flex items-center justify-between py-4">
+          <div class="flex items-center gap-3">
+            <ion-icon src="assets/icons/phone.svg"></ion-icon>
+            <span class="font-bold text-xs text-text-tertiary"
+              >Phone number</span
+            >
+          </div>
+          <p class="font-medium">0528695414</p>
+        </div>
+        <div class="flex items-center justify-between py-4">
+          <div class="flex items-center gap-3">
+            <ion-icon src="assets/icons/location-pin.svg"></ion-icon>
+            <span class="font-bold text-xs text-text-tertiary">Address</span>
+          </div>
+          <p class="font-medium">01 Phu Dong Thien Vuong</p>
+        </div>
+      </section>
+      <!-- End: User info -->
+
+      <ion-button
+        shape="round"
+        color="tertiary"
+        class="edit-button m-0 mt-3 font-bold text-lg"
+      >
+        Edit profile
+        <ion-icon
+          slot="end"
+          src="assets/icons/pen.svg"
+          class="text-sm"
+        ></ion-icon>
+      </ion-button>
+    </div>
+  </div>
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-setting',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./setting.page.scss'],
 })
 export class SettingPage implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  public handleBack(): void {
+    this.router.navigate(['/tabs/home']);
   }
-
+  public handleLogout(): void {
+    this.router.navigate(['/login']);
+  }
 }

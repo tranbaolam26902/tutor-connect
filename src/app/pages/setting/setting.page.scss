@@ -1,0 +1,21 @@
+.container {
+  --background: var(--secondary);
+}
+.button {
+  --padding-top: 0.5rem;
+  --padding-start: 0.5rem;
+  --padding-end: 0.5rem;
+  --padding-bottom: 0.5rem;
+  --background: var(--secondary);
+  --background-hover: var(--light-gray);
+  --background-activated: var(--light-gray);
+  --box-shadow: none;
+}
+ion-button.logout-button {
+  --padding-top: 1.2rem;
+  --padding-bottom: 1.2rem;
+  text-transform: initial;
+  --background: var(--white);
+  --border-radius: 0.75rem;
+  --box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
