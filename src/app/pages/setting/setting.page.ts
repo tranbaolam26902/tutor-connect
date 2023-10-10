@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,12 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./setting.page.scss'],
 })
 export class SettingPage implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private location: Location) {}
 
   ngOnInit() {}
 
   public handleBack(): void {
-    this.router.navigate(['/tabs/home']);
+    this.location.back();
+  }
+  public handleNavigateNotification(): void {
+    this.router.navigate(['/tabs/notification']);
   }
   public handleLogout(): void {
     this.router.navigate(['/login']);

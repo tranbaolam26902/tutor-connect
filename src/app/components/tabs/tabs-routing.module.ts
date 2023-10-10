@@ -34,6 +34,20 @@ const routes: Routes = [
             (m) => m.SettingPageModule
           ),
       },
+      {
+        path: 'notification',
+        loadChildren: () =>
+          import('../../pages/notification/notification.module').then(
+            (m) => m.NotificationPageModule
+          ),
+      },
+      {
+        path: 'tutor/:id',
+        loadChildren: () =>
+          import('../../pages/tutor/tutor.module').then(
+            (m) => m.TutorPageModule
+          ),
+      },
     ],
   },
 ];

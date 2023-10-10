@@ -1,0 +1,24 @@
+<button
+  type="button"
+  class="ion-activatable overflow-hidden relative flex gap-2.5 p-2 w-full bg-white rounded-xl shadow"
+  (click)="handleNavigateTutorProfile()"
+>
+  <img
+    src="assets/images/placeholder.png"
+    alt="placeholder"
+    class="h-full rounded-xl shadow"
+  />
+  <div class="flex-1 flex flex-col gap-2 text-left">
+    <div class="flex items-center justify-between">
+      <span class="font-bold">Tutor name</span>
+      <div class="flex items-center gap-0.5">
+        <span class="font-bold">5</span>
+        <img src="assets/icons/star.svg" alt="rating-icon" />
+      </div>
+    </div>
+    <span class="font-bold text-text-secondary">English, Spanish</span>
+    <span class="text-sm">Online</span>
+    <span class="text-sm">100.000d - 200.000d/hour</span>
+  </div>
+  <ion-ripple-effect></ion-ripple-effect>
+</button>

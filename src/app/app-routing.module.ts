@@ -34,6 +34,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./components/tabs/tabs.module').then((m) => m.TabsPageModule),
   },
+  {
+    path: 'notification',
+    loadChildren: () => import('./pages/notification/notification.module').then( m => m.NotificationPageModule)
+  },
+  {
+    path: 'tutor',
+    loadChildren: () => import('./pages/tutor/tutor.module').then( m => m.TutorPageModule)
+  },
 ];
 
 @NgModule({
