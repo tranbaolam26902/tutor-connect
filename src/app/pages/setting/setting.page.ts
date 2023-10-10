@@ -2,16 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.page.html',
-  styleUrls: ['./profile.page.scss'],
+  selector: 'app-setting',
+  templateUrl: './setting.page.html',
+  styleUrls: ['./setting.page.scss'],
 })
-export class ProfilePage implements OnInit {
+export class SettingPage implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
   public handleBack(): void {
     this.router.navigate(['/tabs/home']);
+  }
+  public handleLogout(): void {
+    this.router.navigate(['/login']);
   }
 }

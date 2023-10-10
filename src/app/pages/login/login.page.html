@@ -8,13 +8,13 @@
     />
     <div class="flex flex-col gap-10 px-5 py-10 bg-secondary">
       <div class="flex flex-col gap-1">
-        <h1 class="font-bold text-sm uppercase">Sign in</h1>
+        <h1 class="font-bold text-sm uppercase">Login</h1>
         <h2 class="font-bold text-4xl capitalize">Welcome back!</h2>
         <h3 class="text-sm text-text-secondary font-bold">
           Connect to the biggest learning community.
         </h3>
       </div>
-      <form class="flex flex-col gap-4">
+      <form class="flex flex-col gap-4" (submit)="handleLogin()">
         <ion-list
           lines="none"
           class="flex flex-col gap-4 -m-1 p-1 bg-secondary"
@@ -45,10 +45,11 @@
         </ion-list>
         <a
           [routerLink]="['/reset-password']"
-          class="font-bold text-end text-sm text-accent"
+          class="ml-auto w-fit font-bold text-sm text-accent"
           >Forgot your password?</a
         >
         <ion-button
+          type="submit"
           color="tertiary"
           class="login-button m-0 font-bold text-lg uppercase"
           >Log in</ion-button
@@ -63,21 +64,23 @@
         <div class="flex gap-3">
           <button
             type="button"
-            class="flex-1 flex items-center justify-center p-3 bg-white border border-[#F4F5F7] rounded-lg shadow"
+            class="ion-activatable overflow-hidden relative flex-1 flex items-center justify-center p-4 h-12 bg-white border border-[#F4F5F7] rounded-lg shadow"
           >
             <ion-icon
               src="assets/icons/logo-google.svg"
               class="text-xl"
             ></ion-icon>
+            <ion-ripple-effect></ion-ripple-effect>
           </button>
           <button
             type="button"
-            class="flex-1 flex items-center justify-center p-3 bg-white border border-[#F4F5F7] rounded-lg shadow"
+            class="ion-activatable overflow-hidden relative flex-1 flex items-center justify-center p-4 h-12 bg-white border border-[#F4F5F7] rounded-lg shadow"
           >
             <ion-icon
               src="assets/icons/logo-facebook.svg"
               class="text-xl"
             ></ion-icon>
+            <ion-ripple-effect></ion-ripple-effect>
           </button>
         </div>
       </div>

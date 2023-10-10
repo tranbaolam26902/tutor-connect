@@ -1,0 +1,55 @@
+<ion-tabs (ionTabsDidChange)="handleChangeTab($event)">
+  <ion-tab-bar
+    slot="bottom"
+    class="absolute left-1/2 bottom-2 w-72 -translate-x-1/2 bg-accent rounded-full"
+  >
+    <ion-tab-button tab="home" class="bg-accent">
+      <ion-icon
+        name="home"
+        [ngClass]="selectedTab === 'home' ? 'text-white' : 'text-lighter-accent'"
+        class="text-2xl"
+      ></ion-icon>
+      <span
+        *ngIf="selectedTab === 'home'"
+        class="font-medium text-[0.5rem] text-white"
+        >Home</span
+      >
+    </ion-tab-button>
+    <ion-tab-button tab="schedule" class="bg-accent">
+      <ion-icon
+        name="calendar"
+        [ngClass]="selectedTab === 'schedule' ? 'text-white' : 'text-lighter-accent'"
+        class="text-2xl"
+      ></ion-icon>
+      <span
+        *ngIf="selectedTab === 'schedule'"
+        class="font-medium text-[0.5rem] text-white"
+        >Schedule</span
+      >
+    </ion-tab-button>
+    <ion-tab-button tab="profile" class="bg-accent">
+      <ion-icon
+        name="person"
+        [ngClass]="selectedTab === 'profile' ? 'text-white' : 'text-lighter-accent'"
+        class="text-2xl"
+      ></ion-icon>
+      <span
+        *ngIf="selectedTab === 'profile'"
+        class="font-medium text-[0.5rem] text-white"
+        >Profile</span
+      >
+    </ion-tab-button>
+    <ion-tab-button tab="setting" class="bg-accent">
+      <ion-icon
+        name="settings"
+        [ngClass]="selectedTab === 'setting' ? 'text-white' : 'text-lighter-accent'"
+        class="text-2xl"
+      ></ion-icon>
+      <span
+        *ngIf="selectedTab === 'setting'"
+        class="font-medium text-[0.5rem] text-white"
+        >Setting</span
+      >
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
