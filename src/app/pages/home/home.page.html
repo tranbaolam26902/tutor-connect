@@ -2,13 +2,18 @@
   <div class="relative bg-secondary">
     <!-- Start: Header -->
     <header
-      class="sticky top-0 flex items-center gap-2 px-5 py-2 h-[4.25rem] bg-secondary"
+      class="sticky top-0 z-10 flex items-center gap-2 px-5 py-2 h-[4.25rem] bg-secondary"
     >
       <ion-searchbar
         show-clear-button="focus"
         class="overflow-hidden h-full bg-white rounded-full shadow [--background:var(--white)]"
       ></ion-searchbar>
-      <ion-button size="small" shape="round" class="button aspect-square">
+      <ion-button
+        size="small"
+        shape="round"
+        class="button aspect-square"
+        (click)="handleNavigateNotification()"
+      >
         <ion-icon
           slot="icon-only"
           name="notifications-outline"
@@ -19,7 +24,79 @@
     <!-- End: Header -->
 
     <!-- Start: Body -->
-    <section class="bg-secondary"></section>
+    <section class="flex flex-col gap-6 mb-20 px-5 pt-2 bg-secondary">
+      <!-- Start: Banner section -->
+      <section class="flex flex-col gap-4">
+        <div
+          class="flex items-center justify-center h-40 bg-white rounded-xl shadow"
+        >
+          <img src="assets/images/placeholder.png" alt="placeholder" />
+        </div>
+        <div class="flex gap-4 h-40">
+          <div
+            class="flex-1 flex items-center justify-center bg-white rounded-xl shadow"
+          >
+            <img src="assets/images/placeholder.png" alt="placeholder" />
+          </div>
+          <div
+            class="flex-1 flex items-center justify-center bg-white rounded-xl shadow"
+          >
+            <img src="assets/images/placeholder.png" alt="placeholder" />
+          </div>
+        </div>
+      </section>
+      <!-- End: Banner section -->
+
+      <!-- Start: Subjects section -->
+      <section class="flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <span class="font-bold capitalize">Explore subjects</span>
+          <a class="font-medium text-accent">See all</a>
+        </div>
+        <div class="grid grid-cols-3 gap-x-1 gap-y-2">
+          <app-subject-tag></app-subject-tag>
+          <app-subject-tag></app-subject-tag>
+          <app-subject-tag></app-subject-tag>
+          <app-subject-tag></app-subject-tag>
+          <app-subject-tag></app-subject-tag>
+        </div>
+      </section>
+      <!-- End: Subjects section -->
+
+      <!-- Start: Featured tutors section -->
+      <section class="flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <span class="font-bold capitalize">Highest ranking tutors</span>
+          <a class="font-medium text-accent">See all</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+        </div>
+      </section>
+      <!-- End: Featured tutors section -->
+
+      <!-- Start: Recommended tutors section -->
+      <section class="flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <span class="font-bold capitalize">Recommended tutors</span>
+          <a class="font-medium text-accent">See all</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+          <app-tutor-item></app-tutor-item>
+        </div>
+      </section>
+      <!-- End: Recommended tutors section -->
+    </section>
     <!-- End: Body -->
   </div>
 </ion-content>

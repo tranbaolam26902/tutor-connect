@@ -16,19 +16,8 @@
           class="text-text-secondary"
         ></ion-icon>
       </ion-button>
-      <h1 class="font-bold text-xl text-text-secondary">Schedule</h1>
-      <ion-button
-        size="small"
-        shape="round"
-        class="button aspect-square"
-        (click)="handleNavigateNotification()"
-      >
-        <ion-icon
-          slot="icon-only"
-          name="notifications-outline"
-          class="text-text-secondary"
-        ></ion-icon>
-      </ion-button>
+      <h1 class="font-bold text-xl text-text-secondary">Notification</h1>
+      <span></span>
     </header>
     <!-- End: Header -->
 
@@ -40,7 +29,7 @@
             type="button"
             value="incoming"
             class="ion-activatable overflow-hidden relative flex-1 px-1 py-2 font-bold text-xs rounded-xl transition duration-200"
-            [ngClass]="scheduleState === 'incoming' ? 'bg-accent text-white' : 'text-text-secondary'"
+            [ngClass]="notificationState === 'incoming' ? 'bg-accent text-white' : 'text-text-secondary'"
             (click)="handleChangeState($event)"
           >
             Incoming
@@ -48,36 +37,34 @@
           </button>
           <button
             type="button"
-            value="pending"
+            value="booking"
             class="ion-activatable overflow-hidden relative flex-1 px-1 py-2 font-bold text-xs rounded-xl transition duration-200"
-            [ngClass]="scheduleState === 'pending' ? 'bg-accent text-white' : 'text-text-secondary'"
+            [ngClass]="notificationState === 'booking' ? 'bg-accent text-white' : 'text-text-secondary'"
             (click)="handleChangeState($event)"
           >
-            Pending
+            Booking
             <ion-ripple-effect></ion-ripple-effect>
           </button>
           <button
             type="button"
-            value="cancelled"
+            value="community"
             class="ion-activatable overflow-hidden relative flex-1 px-1 py-2 font-bold text-xs rounded-xl transition duration-200"
-            [ngClass]="scheduleState === 'cancelled' ? 'bg-accent text-white' : 'text-text-secondary'"
+            [ngClass]="notificationState === 'community' ? 'bg-accent text-white' : 'text-text-secondary'"
             (click)="handleChangeState($event)"
           >
-            Cancelled
+            Community
             <ion-ripple-effect></ion-ripple-effect>
           </button>
         </div>
-        <div class="flex items-center justify-between">
-          <div class="flex gap-2">
-            <span class="font-semibold">Total:</span>
-            <span class="font-bold">4</span>
-          </div>
-          <a class="font-semibold text-accent">View history</a>
-        </div>
-        <app-schedule-item></app-schedule-item>
-        <app-schedule-item></app-schedule-item>
-        <app-schedule-item></app-schedule-item>
-        <app-schedule-item></app-schedule-item>
+        <button class="flex items-center gap-2 ml-auto w-fit">
+          <span class="font-medium text-accent">Check all notifications</span>
+          <img src="assets/icons/list-check.svg" alt="list-check-icon" />
+        </button>
+        <app-notification-item></app-notification-item>
+        <app-notification-item></app-notification-item>
+        <app-notification-item></app-notification-item>
+        <app-notification-item></app-notification-item>
+        <app-notification-item></app-notification-item>
       </div>
     </section>
     <!-- End: Body -->

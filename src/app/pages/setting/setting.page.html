@@ -2,7 +2,7 @@
   <div class="relative bg-secondary">
     <!-- Start: Header -->
     <header
-      class="sticky top-0 flex items-center justify-between gap-2 px-5 py-2 h-[4.25rem] bg-secondary"
+      class="sticky top-0 z-10 flex items-center justify-between gap-2 px-5 py-2 h-[4.25rem] bg-secondary"
     >
       <ion-button
         size="small"
@@ -17,7 +17,12 @@
         ></ion-icon>
       </ion-button>
       <h1 class="font-bold text-xl text-text-secondary">Setting</h1>
-      <ion-button size="small" shape="round" class="button aspect-square">
+      <ion-button
+        size="small"
+        shape="round"
+        class="button aspect-square"
+        (click)="handleNavigateNotification()"
+      >
         <ion-icon
           slot="icon-only"
           name="notifications-outline"
@@ -28,7 +33,7 @@
     <!-- End: Header -->
 
     <!-- Start: Body -->
-    <section class="flex flex-col gap-4 px-5 py-2">
+    <section class="flex flex-col gap-4 mb-20 px-5 py-2">
       <div class="bg-white rounded-xl shadow">
         <ion-select
           label="Language/Ngôn ngữ"

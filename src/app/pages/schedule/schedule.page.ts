@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-schedule',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./schedule.page.scss'],
 })
 export class SchedulePage implements OnInit {
+  public scheduleState: string = 'incoming';
 
-  constructor() { }
+  constructor(private router: Router, private location: Location) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  public handleBack(): void {
+    this.location.back();
   }
-
+  public handleChangeState(event: any): void {
+    this.scheduleState = event.target.value;
+  }
+  public handleNavigateNotification(): void {
+    this.router.navigate(['/tabs/notification']);
+  }
 }

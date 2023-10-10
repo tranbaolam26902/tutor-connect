@@ -2,7 +2,7 @@
   <div class="relative bg-secondary">
     <!-- Start: Header -->
     <header
-      class="sticky top-0 flex items-center justify-between gap-2 px-5 py-2 h-[4.25rem] bg-secondary"
+      class="sticky top-0 z-10 flex items-center justify-between gap-2 px-5 py-2 h-[4.25rem] bg-secondary"
     >
       <ion-button
         size="small"
@@ -17,7 +17,12 @@
         ></ion-icon>
       </ion-button>
       <h1 class="font-bold text-xl text-text-secondary">Profile</h1>
-      <ion-button size="small" shape="round" class="button aspect-square">
+      <ion-button
+        size="small"
+        shape="round"
+        class="button aspect-square"
+        (click)="handleNavigateNotification()"
+      >
         <ion-icon
           slot="icon-only"
           name="notifications-outline"
@@ -28,21 +33,27 @@
     <!-- End: Header -->
 
     <!-- Start: Body -->
-    <div class="relative flex flex-col gap-3 px-5 py-2 bg-secondary">
+    <div class="relative flex flex-col gap-3 mb-20 px-5 py-2 bg-secondary">
       <!-- Start: Avatar -->
-      <section
-        class="absolute left-1/2 z-10 mx-auto w-32 aspect-square bg-accent border-8 border-white rounded-full -translate-x-1/2 shadow"
+      <div
+        class="absolute left-1/2 z-0 mx-auto border-8 border-white rounded-full shadow -translate-x-1/2"
       >
+        <img src="assets/images/avatar.png" alt="avatar" class="w-[6.25rem]" />
+      </div>
+      <div
+        class="absolute left-1/2 z-20 mx-auto border-8 border-white rounded-full -translate-x-1/2"
+      >
+        <img src="assets/images/avatar.png" alt="avatar" class="w-[6.25rem]" />
         <span
-          class="absolute left-1/2 -bottom-2 px-2 py-1 w-max font-bold text-sm text-accent capitalize bg-white border border-accent rounded-full -translate-x-1/2"
-          >Basic User</span
+          class="absolute left-1/2 -bottom-2 inline-block px-2 py-1 w-max font-bold text-xs text-success capitalize bg-white border border-success rounded-xl -translate-x-1/2"
+          >Basic user</span
         >
-      </section>
+      </div>
       <!-- End: Avatar -->
 
       <!-- Start: Account info -->
       <section
-        class="relative z-0 mt-[4.25rem] flex flex-col items-center gap-9 px-4 pt-20 pb-9 bg-white rounded-3xl shadow"
+        class="relative z-10 mt-14 flex flex-col items-center gap-9 px-4 pt-20 pb-9 bg-white rounded-3xl shadow"
       >
         <div class="flex flex-col items-center gap-2">
           <h2 class="font-bold text-2xl text-text-primary">

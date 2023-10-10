@@ -11,3 +11,12 @@
   --background-activated: var(--light-gray);
   --box-shadow: none;
 }
+ion-button.chat-button,
+ion-button.book-button {
+  --padding-top: 0.5rem;
+  --padding-start: 1rem;
+  --padding-end: 1rem;
+  --padding-bottom: 0.5rem;
+  --border-width: 0.125rem;
+  --border-radius: 0.5rem;
+}

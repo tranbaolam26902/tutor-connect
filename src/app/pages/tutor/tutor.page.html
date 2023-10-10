@@ -1,0 +1,164 @@
+<ion-content class="container">
+  <div class="relative bg-secondary">
+    <!-- Start: Header -->
+    <header
+      class="sticky top-0 z-10 flex items-center justify-between gap-2 px-5 py-2 h-[4.25rem] bg-secondary"
+    >
+      <ion-button
+        size="small"
+        shape="round"
+        class="button aspect-square"
+        (click)="handleBack()"
+      >
+        <ion-icon
+          slot="icon-only"
+          name="arrow-back-outline"
+          class="text-text-secondary"
+        ></ion-icon>
+      </ion-button>
+      <h1 class="font-bold text-xl text-text-secondary">Profile</h1>
+      <ion-button
+        size="small"
+        shape="round"
+        class="button aspect-square"
+        (click)="handleNavigateNotification()"
+      >
+        <ion-icon
+          slot="icon-only"
+          name="notifications-outline"
+          class="text-text-secondary"
+        ></ion-icon>
+      </ion-button>
+    </header>
+    <!-- End: Header -->
+
+    <!-- Start: Body -->
+    <section class="relative flex flex-col gap-4 mb-20 px-5 py-2 bg-secondary">
+      <!-- Start: Account info section -->
+      <section class="flex flex-col gap-6 p-4 bg-white rounded-xl shadow">
+        <div class="flex items-start gap-3.5">
+          <img
+            src="assets/images/avatar.png"
+            alt="avatar"
+            class="w-full max-w-[6.75rem] aspect-square object-contain drop-shadow"
+          />
+          <div class="flex-1 flex flex-col gap-3">
+            <span class="font-bold text-2xl">Mr. Quang Vu</span>
+            <div class="flex items-center gap-1">
+              <span class="text-xs">TutorConnect’s Certified Tutor</span>
+              <img src="assets/icons/certificate.svg" alt="certificate-icon" />
+            </div>
+            <div class="flex gap-3">
+              <div class="flex-1 flex flex-col items-center gap-2">
+                <h4 class="font-bold text-2xs text-text-tertiary">Rating</h4>
+                <div class="flex items-center gap-1">
+                  <span class="font-bold">5</span>
+                  <img src="assets/icons/star.svg" alt="rating-icon" />
+                </div>
+              </div>
+              <span class="my-auto w-px h-7 bg-text-tertiary"></span>
+              <div class="flex-1 flex flex-col items-center gap-2">
+                <h4 class="font-bold text-2xs text-text-tertiary">
+                  Hourly Rate
+                </h4>
+                <span class="font-bold">200.000d</span>
+              </div>
+              <span class="my-auto w-px h-7 bg-text-tertiary"></span>
+              <div class="flex-1 flex flex-col items-center gap-2">
+                <h4 class="font-bold text-2xs text-text-tertiary">Sessions</h4>
+                <span class="font-bold">172</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <ion-button
+            color="tertiary"
+            fill="outline"
+            class="chat-button flex-1 m-0 font-bold text-sm normal-case"
+            >Chat with tutor</ion-button
+          >
+          <ion-button
+            color="tertiary"
+            class="book-button flex-1 m-0 font-bold text-sm normal-case"
+            >Book now</ion-button
+          >
+        </div>
+      </section>
+      <!-- End: Account info section -->
+
+      <!-- Start: Information section -->
+      <section class="flex flex-col gap-4 p-4 bg-white rounded-xl shadow">
+        <span class="font-bold">Information</span>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center justify-between">
+            <span>Full name</span>
+            <span>Nguyen Quang Vu</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Birthday</span>
+            <span>10/04/2002</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Subject</span>
+            <span>Math, English</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Learning mode</span>
+            <span>in-class, online</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span>Experiences</span>
+            <span>2 years</span>
+          </div>
+        </div>
+      </section>
+      <!-- End: Information section -->
+
+      <!-- Start: About section -->
+      <section class="flex flex-col gap-4 p-4 bg-white rounded-xl shadow">
+        <span class="font-bold">About</span>
+        <p>
+          Ready to elevate your English skills? I'm Quang Vu, an experienced
+          English tutor here to guide you on your language journey. From grammar
+          to conversation, I'll help you excel. Book a session today and embark
+          on a rewarding language adventure with me.
+        </p>
+      </section>
+      <!-- End: About section -->
+
+      <!-- Start: Available sessions section -->
+      <section class="flex flex-col gap-4 p-4 bg-white rounded-xl shadow">
+        <span class="font-bold capitalize">Available sessions</span>
+        <div class="flex flex-col gap-3">
+          <span class="font-bold text-sm">Monday, 09/10/2023</span>
+          <div class="grid grid-cols-3 gap-x-1 gap-y-2">
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="font-bold text-sm">Tuesday, 10/10/2023</span>
+          <div class="grid grid-cols-3 gap-x-1 gap-y-2">
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+            <app-session-tag></app-session-tag>
+          </div>
+        </div>
+        <ion-button
+          color="tertiary"
+          class="book-button m-0 font-bold text-sm normal-case"
+          >Book</ion-button
+        >
+      </section>
+      <!-- End: Available sessions section -->
+    </section>
+  </div>
+</ion-content>
