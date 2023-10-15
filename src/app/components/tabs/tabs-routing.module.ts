@@ -28,6 +28,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'edit-profile',
+        loadChildren: () =>
+          import('../../pages/edit-profile/edit-profile.module').then(
+            (m) => m.EditProfilePageModule
+          ),
+      },
+      {
         path: 'setting',
         loadChildren: () =>
           import('../../pages/setting/setting.module').then(

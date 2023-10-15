@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.page.html',
-  styleUrls: ['./profile.page.scss'],
+  selector: 'app-edit-profile',
+  templateUrl: './edit-profile.page.html',
+  styleUrls: ['./edit-profile.page.scss'],
 })
-export class ProfilePage implements OnInit {
+export class EditProfilePage implements OnInit {
   constructor(private router: Router, private location: Location) {}
 
   ngOnInit() {}
@@ -17,8 +17,5 @@ export class ProfilePage implements OnInit {
   }
   public handleNavigateNotification(): void {
     this.router.navigate(['/tabs/notification']);
-  }
-  public handleEditProfile(): void {
-    this.router.navigate(['/tabs/edit-profile']);
   }
 }
