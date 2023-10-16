@@ -8,7 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
-  constructor(private router: Router, private location: Location) {}
+  public user: any;
+
+  constructor(private router: Router, private location: Location) {
+    this.user = JSON.parse(localStorage.getItem('user') || '{}');
+    this.user.joinedDate = new Date(this.user.joinedDate).toLocaleDateString(
+      'vi-VN'
+    );
+    if (this.user.birthday)
+      this.user.birthday = new Date(this.user.birthday).toLocaleDateString(
+        'vi-VN'
+      );
+  }
 
   ngOnInit() {}
 

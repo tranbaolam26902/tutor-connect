@@ -35,50 +35,70 @@
     <!-- Start: Body -->
     <div class="mb-20 px-5 py-2 bg-secondary">
       <div class="flex flex-col gap-3 p-4 bg-white rounded-3xl shadow">
+        <!-- Start: Avatar section -->
         <div
-          class="flex items-center justify-center gap-2 mx-auto w-[7.5rem] aspect-square bg-accent rounded-full"
+          class="relative mx-auto max-w-[7.5rem] aspect-square rounded-full group"
         >
-          <span class="font-bold text-lg text-white">Edit</span>
-          <img src="assets/icons/pen.svg" alt="edit-icon" class="w-3" />
+          <img
+            src="{{user.avatarUrl || 'assets/images/avatar.png'}}"
+            alt="avatar"
+            class="object-cover object-center"
+          />
         </div>
-        <h1 class="font-bold text-2xl text-center">Nguyen Quang Vu</h1>
-        <div class="flex flex-col gap-2">
+        <!-- End: Avatar section -->
+
+        <!-- Start: Form section -->
+        <h1 class="font-bold text-2xl text-center">{{user.fullname}}</h1>
+        <h4 class="font-medium text-center text-sm text-text-secondary">
+          {{user.email}}
+        </h4>
+        <form
+          [formGroup]="updateForm"
+          class="flex flex-col gap-2"
+          (ngSubmit)="handleUpdateProfile()"
+        >
           <div class="flex items-center">
-            <span class="w-20 font-bold text-sm">Email</span>
+            <span class="w-20 font-bold text-sm">Name</span>
             <input
-              placeholder="2012394@dlu.edu.vn"
+              formControlName="fullname"
+              placeholder="{{user.fullname}}"
               class="flex-1 py-4 font-medium text-center placeholder-text-tertiary border-0 border-b border-solid border-b-light-gray"
             />
           </div>
           <div class="flex items-center">
             <span class="w-20 font-bold text-sm">Birthday</span>
             <input
-              placeholder="10/04/2002"
+              formControlName="birthday"
+              placeholder="{{user.birthday}}"
               class="flex-1 py-4 font-medium text-center placeholder-text-tertiary border-0 border-b border-solid border-b-light-gray"
             />
           </div>
           <div class="flex items-center">
             <span class="w-20 font-bold text-sm">Phone</span>
             <input
-              placeholder="0528695414"
+              formControlName="phone"
+              placeholder="{{user.phone}}"
               class="flex-1 py-4 font-medium text-center placeholder-text-tertiary border-0 border-b border-solid border-b-light-gray"
             />
           </div>
           <div class="flex items-center">
             <span class="w-20 font-bold text-sm">Address</span>
             <input
-              placeholder="01 Phu Dong Thien Vuong"
+              formControlName="address"
+              placeholder="{{user.address}}"
               class="flex-1 py-4 font-medium text-center placeholder-text-tertiary border-0 border-b border-solid border-b-light-gray"
             />
           </div>
           <ion-button
+            type="submit"
             shape="round"
             color="tertiary"
             class="edit-button m-0 ml-auto mt-3 w-fit font-bold text-lg"
           >
             Save
           </ion-button>
-        </div>
+        </form>
+        <!-- End: Form section -->
       </div>
     </div>
   </div>

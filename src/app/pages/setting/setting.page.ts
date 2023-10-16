@@ -19,7 +19,7 @@ export class SettingPage implements OnInit {
     this.router.navigate(['/tabs/notification']);
   }
   public handleLogout(): void {
-    localStorage.removeItem('access_token');
+    localStorage.removeItem('user');
     this.router.navigate(['/login']);
   }
 }
