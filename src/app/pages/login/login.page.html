@@ -1,5 +1,5 @@
-<ion-content>
-  <section slot="fixed" class="relative h-screen bg-secondary">
+<ion-content class="container">
+  <section class="relative bg-secondary">
     <div class="relative h-[8.75rem] bg-accent">
       <ion-img
         src="assets/images/logo-with-text.png"
@@ -15,7 +15,11 @@
           Connect to the biggest learning community.
         </h3>
       </div>
-      <form class="flex flex-col gap-4" (submit)="handleLogin()">
+      <form
+        [formGroup]="loginForm"
+        class="flex flex-col gap-4"
+        (ngSubmit)="handleLogin()"
+      >
         <ion-list
           lines="none"
           class="flex flex-col gap-4 -m-1 p-1 bg-secondary"
@@ -26,6 +30,7 @@
               class="text-base"
             ></ion-icon>
             <ion-input
+              formControlName="email"
               type="email"
               [clearInput]="true"
               placeholder="Enter your email"
@@ -36,6 +41,7 @@
           <ion-item class="ion-item rounded-lg shadow">
             <ion-icon src="assets/icons/lock.svg" class="text-base"></ion-icon>
             <ion-input
+              formControlName="password"
               type="password"
               [clearInput]="true"
               placeholder="Enter your password"
