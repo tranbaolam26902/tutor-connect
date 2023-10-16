@@ -72,17 +72,8 @@ export class SignUpPage implements OnInit {
     );
 
     if (signUpResult.isSuccess) {
-      const loginResult = await this.authService.login(
-        this.signUpForm.value.email,
-        this.signUpForm.value.password
-      );
-      if (loginResult.isSuccess) {
-        localStorage.setItem(
-          'access_token',
-          JSON.stringify(loginResult.access_token)
-        );
-        this.router.navigate(['/tabs/home']);
-      } else this.showAlert(signUpResult._errors[0]);
+      localStorage.setItem('user', JSON.stringify(signUpResult.result));
+      window.location.pathname = '/tabs/home';
     } else this.showAlert(signUpResult._errors[0]);
   }
 }

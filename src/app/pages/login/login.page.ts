@@ -62,11 +62,8 @@ export class LoginPage implements OnInit {
     );
 
     if (loginResult.isSuccess) {
-      localStorage.setItem(
-        'access_token',
-        JSON.stringify(loginResult.result.access_token)
-      );
-      this.router.navigate(['/tabs/home']);
+      localStorage.setItem('user', JSON.stringify(loginResult.result));
+      window.location.pathname = '/tabs/home';
     } else this.showAlert(loginResult._errors[0]);
   }
 }

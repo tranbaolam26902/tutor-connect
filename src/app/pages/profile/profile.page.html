@@ -43,7 +43,11 @@
       <div
         class="absolute left-1/2 z-20 mx-auto border-8 border-white rounded-full -translate-x-1/2"
       >
-        <img src="assets/images/avatar.png" alt="avatar" class="w-[6.25rem]" />
+        <img
+          src="{{user.avatarUrl || 'assets/images/avatar.png'}}"
+          alt="avatar"
+          class="w-[6.25rem]"
+        />
         <span
           class="absolute left-1/2 -bottom-2 inline-block px-2 py-1 w-max font-bold text-xs text-success capitalize bg-white border border-success rounded-xl -translate-x-1/2"
           >Basic user</span
@@ -57,29 +61,29 @@
       >
         <div class="flex flex-col items-center gap-2">
           <h2 class="font-bold text-2xl text-text-primary">
-            Neovim Catppuccin
+            {{user.fullname}}
           </h2>
           <h4 class="font-medium text-sm text-text-secondary">
-            catppuccin@gmail.com
+            {{user.email}}
           </h4>
         </div>
         <div class="flex gap-3">
           <div class="flex flex-col items-center gap-2">
-            <h4 class="font-bold text-text-primary">29/09/2023</h4>
+            <h4 class="font-bold text-text-primary">{{user.joinedDate}}</h4>
             <h6 class="font-bold text-2xs text-text-tertiary capitalize">
               Joined since
             </h6>
           </div>
           <span class="my-auto w-px h-7 bg-text-tertiary"></span>
           <div class="flex flex-col items-center gap-2">
-            <h4 class="font-bold text-text-primary">144</h4>
+            <h4 class="font-bold text-text-primary">0</h4>
             <h6 class="font-bold text-2xs text-text-tertiary capitalize">
               Total booking
             </h6>
           </div>
           <span class="my-auto w-px h-7 bg-text-tertiary"></span>
           <div class="flex flex-col items-center gap-2">
-            <h4 class="font-bold text-text-primary">4096</h4>
+            <h4 class="font-bold text-text-primary">0</h4>
             <h6 class="font-bold text-2xs text-text-tertiary capitalize">
               Hour studied
             </h6>
@@ -97,7 +101,7 @@
             <ion-icon src="assets/icons/cake.svg"></ion-icon>
             <span class="font-bold text-xs text-text-tertiary">Birthday</span>
           </div>
-          <p class="font-medium">10/04/2002</p>
+          <p class="font-medium">{{user.birthday}}</p>
         </div>
         <div class="flex items-center justify-between py-4">
           <div class="flex items-center gap-3">
@@ -106,14 +110,14 @@
               >Phone number</span
             >
           </div>
-          <p class="font-medium">0528695414</p>
+          <p class="font-medium">{{user.phone}}</p>
         </div>
         <div class="flex items-center justify-between py-4">
           <div class="flex items-center gap-3">
             <ion-icon src="assets/icons/location-pin.svg"></ion-icon>
             <span class="font-bold text-xs text-text-tertiary">Address</span>
           </div>
-          <p class="font-medium">01 Phu Dong Thien Vuong</p>
+          <p class="font-medium">{{user.address}}</p>
         </div>
       </section>
       <!-- End: User info -->
