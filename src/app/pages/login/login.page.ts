@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -14,7 +13,6 @@ export class LoginPage implements OnInit {
   private alert: any;
 
   constructor(
-    private router: Router,
     private authService: AuthService,
     private alertController: AlertController,
     public formBuilder: FormBuilder
