@@ -77,19 +77,19 @@ export class EditProfilePage implements OnInit {
 
     let newProfile = {};
     if (this.updateForm.value.fullname !== '')
-      newProfile = { ...newProfile, fullname: this.updateForm.value.email };
+      newProfile = { ...newProfile, fullname: this.updateForm.value.fullname };
     if (this.updateForm.value.birthday !== '')
       newProfile = { ...newProfile, birthday: this.updateForm.value.birthday };
     if (this.updateForm.value.phone !== '')
       newProfile = { ...newProfile, phone: this.updateForm.value.phone };
     if (this.updateForm.value.address !== '')
-      newProfile = { ...newProfile, phone: this.updateForm.value.address };
+      newProfile = { ...newProfile, address: this.updateForm.value.address };
 
     const updateResult = await this.profileService.updateProfile(newProfile);
 
     if (updateResult.isSuccess) {
-      localStorage.setItem('user', updateResult.result);
-      this.location.back();
+      localStorage.setItem('user', JSON.stringify(updateResult.result));
+      window.location.pathname = '/tabs/profile';
     } else this.showAlert(updateResult._errors[0]);
   }
 }

@@ -14,7 +14,7 @@ export class ProfileService {
       {
         headers: {
           Authorization:
-            'bearer ' +
+            'Bearer ' +
             JSON.parse(localStorage.getItem('user') || '{}').access_token,
         },
       }
